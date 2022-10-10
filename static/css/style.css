@@ -100,6 +100,9 @@ h2 span, h3 span, h4 span, h5 span, h6 span{color:#e04f67;}
 	border-top-right-radius: 3px;
 }
 
+#bck{
+	background-image: url(https://res.cloudinary.com/df2j87kme/image/upload/v1665256353/slide_home_3_t1ndf7.jpg);
+}
 /*General links color*/
 a {color: #e14d67;text-decoration: none;-webkit-transition: all 0.2s ease;transition: all 0.2s ease; outline:none;}
 a:hover,a:focus {color: #111;text-decoration: none; outline:none;}
@@ -5962,6 +5965,8 @@ a.social_bt.linkedin:before {
 }
 #carousel-home .owl-carousel .owl-slide {
   height: 650px;
+  background-image: url("img/slides/slide_home_3.jpg");
+
   position: relative;
 }
 @media (max-width: 767px) {

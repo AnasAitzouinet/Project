@@ -1,4 +1,4 @@
-{% extends 'Base_Home.html'%}
+{% extends 'base_home.html'%}
 {% load static %}
 
 {% block content %}
@@ -20,7 +20,7 @@
     <div id="position">
         <div class="container">
             <ul>
-                <li><a href="{% url 'home' %}">Home</a>
+                <li><a href="{% url 'Home' %}">Home</a>
                 </li>
 
                 <li>Make a Reservation</li>
@@ -31,10 +31,9 @@
     <div class="container margin_60">
         <div class="row">
             <div class="col-lg-8" id="single_tour_desc">
-                <form action="{% url 'reserver' %}" method="post">
+                <form action="" method="post">
                     {% csrf_token %}
                     <h1 class="inner">Make a Reservation</h1>
-                    {% if user.is_authenticated%}{% else %} <h3 style="color:blue ;">Note : It's Better to Log in Before Reserve !! </h3>{% endif %}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -82,7 +81,7 @@
                             <div class="form-group">
                                 <label>Last name</label>
                                 <input class="form-control required" name="last_name" id="last_name"
-                                    type="text" {% if user.is_authenticated %} value="{{ user.last_name}}"  {% endif %}>
+                                    type="text" >
                             </div>
                         </div>
                     </div>
@@ -99,22 +98,7 @@
                         <label>Street line 1</label>
                         <input class="form-control required" type="text" name="streetline_1" id="phone_hotel_booking">
                     </div>
-                    <div class="form-group" style="position:relative">
-                        <label>Street line 2</label>
-                        <input class="form-control required" type="text" name="streetline_2" id="phone_hotel_booking">
-                    </div>
-                    <div class="form-group" style="position:relative">
-                        <label>City</label>
-                        <input class="form-control required" type="text" name="city" id="phone_hotel_booking">
-                    </div>
-                    <div class="form-group" style="position:relative">
-                        <label>State</label>
-                        <input class="form-control required" type="text" name="state" id="phone_hotel_booking">
-                    </div>
-                    <div class="form-group" style="position:relative">
-                        <label>Code Postal</label>
-                        <input class="form-control required" type="text" name="zip_code" id="phone_hotel_booking">
-                    </div>
+                    
                     <div class="form-group" style="position:relative">
                         <label>Details</label>
                         <textarea class="form-control required" rows="4" cols="50" name="details"
@@ -123,31 +107,15 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Excursion :</label>
-                                <select class="form-control" name="excursion" id="Excursion">
-                                    <option value="" selected>Select your Excursion</option>
-                                    <option value="Marrakech">Marrakech</option>
-                                    <option value="Ourika">Ourika</option>
-                                    <option value="Agadir">Agadir</option>
-                                    <option value="Asia">Asia</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
                                 <label>Car :</label>
-                                <select class="form-control" name="cars" id="Excursion">
-                                   
+                                <select class="form-control" name="excursion" id="Excursion">
                                     <option value="" selected>Select your Car</option>
                                     <option value="Mercedes: 02 Pax">Mercedes</option>
                                     <option value="Viano: 04 Pax">Viano: 04 Pax</option>
                                     <option value="H1 : 06 Pax">Agadir</option>
                                     <option value="4*4 : 04Pax">4*4 : 04Pax</option>
-                                    
                                 </select>
-
                             </div>
-
                         </div>
                     </div>
 
@@ -155,7 +123,6 @@
                         now</button>
                 </form>
             </div>
-<!--
             <aside class="col-lg-4">
                 <div class="box_style_1 expose" style="z-index: 4;">
                     <h3 class="inner">- Payment -</h3>
@@ -225,7 +192,6 @@
         </div>
         </aside>
     </div>
- -->
 </main>
 <script>
     $(document).ready(function() {

@@ -53,35 +53,11 @@
 
     <!-- Header================================================== -->
     <header>
-        <div id="top_line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
-                    <div class="col-6">
-                        <ul id="top_links">
-                            <li><a href="" >(Dashboard)</a></li>
-                            <li><a href="javascript:{document.getElementById('logout').submit()}">
-                                <i class="fas fa-sign-out-alt"></i>Logout</li></a>
-                                <form action="" method="post" id="logout">
-                                    <input type="hidden">
-                                </form>
-                        </ul>
-                    
-                        <ul id="top_links">
-                            <li><a href="" >Sign in</a></li>
-                            <li><a href="">Register</a></li>
-                            <li><a href="" id="wishlist_link">Wishlist</a></li>
-                        </ul>
-                    </div>
-                </div><!-- End row -->
-            </div><!-- End container-->
-        </div><!-- End top line-->
-
         <div class="container">
             <div class="row">
                 <div class="col-3">
                     <div id="logo_home">
-                        <h1><a href="" title="City tours travel template">City Tours travel template</a>
+                        <h1><a href="{% url 'Home'%}" title="City tours travel template">City Tours travel template</a>
                         </h1>
                     </div>
                 </div>
@@ -99,10 +75,10 @@
                                 <a href="" class="show-submenu">Home</a>
                             </li>
                             <li class="submenu">
-                                <a href="" class="show-submenu">Reserve</a>
+                                <a href="{% url 'Reservations'%}" class="show-submenu">Reserve</a>
                             </li>
                             <li class="submenu">
-                                <a href="" class="show-submenu">Tours </i></a>
+                                <a href="{% url 'Excursion'%}" class="show-submenu">Excursion </i></a>
                             </li>
                             </li>
                             <li class="submenu">
@@ -158,10 +134,11 @@
         </div><!-- container -->
     </header><!-- End Header -->
     
+{% block content%}
 
 
 
-    
+{% endblock %}    
     <!-- End main -->
 
     <footer class="revealed">
